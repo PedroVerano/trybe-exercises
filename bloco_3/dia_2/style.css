@@ -1,0 +1,32 @@
+h1{
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+}
+ul{
+    background-color: salmon;
+    font-style: italic;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.cor_de_fundo{
+    background-color: skyblue;
+}
+p{
+    font-weight: 600;
+    font-size: 3em;
+}
+body{
+    font-size: 16px;
+}
+#amarelo{
+    background-color: yellow;
+}
+#vermelho{
+    background-color: red;
+}
+#marrom{
+    background-color: rgb(77, 32, 32);
+}
