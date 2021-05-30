@@ -77,9 +77,9 @@ function mudacor(evento) {
   }
 }
 
-let botao = document.querySelector('#btn-holiday');
-console.log(botao)
-botao.addEventListener('click', mudacor);
+let botaoFeriados = document.querySelector('#btn-holiday');
+console.log(botaoFeriados);
+botaoFeriados.addEventListener('click', mudacor);
 
 // Exercício 4:
 // Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
@@ -97,6 +97,23 @@ criarbotao('Sexta-feira',document.querySelector('.buttons-container'),'btn-frida
 // Exercício 5:
 // Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
+let sextaFeira = document.getElementsByClassName('friday');
+let numerosDaSexta = [];
+function sextou(event) {
+  if (sextaFeira[0].innerText != "SEXTOU !") {
+    for (let i  = 0; i < sextaFeira.length; i += 1) {
+      numerosDaSexta.push(sextaFeira[i].innerText);
+      sextaFeira[i].innerText = "SEXTOU !";
+    }
+  }
+  else {
+    for (let i  = 0; i < sextaFeira.length; i += 1) {
+      sextaFeira[i].innerText = numerosDaSexta[i];
+    } 
+  }
+}
+let botaoSextou = document.querySelector('#btn-friday');
+botaoSextou.addEventListener('click', sextou);
 
 // Exercício 6:
 // Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
