@@ -99,6 +99,7 @@ criarbotao('Sexta-feira',document.querySelector('.buttons-container'),'btn-frida
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 let sextaFeira = document.getElementsByClassName('friday');
 let numerosDaSexta = [];
+
 function sextou(event) {
   if (sextaFeira[0].innerText != "SEXTOU !") {
     for (let i  = 0; i < sextaFeira.length; i += 1) {
@@ -118,6 +119,23 @@ botaoSextou.addEventListener('click', sextou);
 // Exercício 6:
 // Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 // Dica - Propriedade: event.target .
+
+function darZoom(event) {
+  event.target.style.fontSize = '30px';
+}
+function tirarZoom(event) {
+  event.target.style.fontSize = '20px';
+}
+
+let diasdoMes = document.getElementsByClassName('day');
+console.log(diasdoMes);
+
+for (let i = 0; i < diasdoMes.length; i += 1) { 
+  diasdoMes[i].addEventListener('mouseover',darZoom)
+  diasdoMes[i].addEventListener('mouseout',tirarZoom)
+}
+
+
 
 // Exercício 7:
 // Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
@@ -141,4 +159,21 @@ botaoSextou.addEventListener('click', sextou);
 // Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
 // Ao pressionar a tecla "enter" o evento também deverá ser disparado.
 // Dica - Propriedade: keyCode .
+
+localStorage.setItem('name', 'Pedro');
+localStorage.setItem('lastName', 'Verano');
+sessionStorage.setItem('car', 0);
+
+criarbotao('Contador',document.querySelector('.buttons-container'),'contador');
+let contadorr = 0;
+function adicionaCar(evento) {
+  contadorr += 1;
+  sessionStorage.setItem('car', contadorr)
+  localStorage.setItem('contador', contadorr);
+  console.log(sessionStorage.getItem('car'));
+  
+}
+document.querySelector('#contador').addEventListener('click',adicionaCar);
+
+
 
