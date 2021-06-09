@@ -121,7 +121,7 @@ botaoSextou.addEventListener('click', sextou);
 // Dica - Propriedade: event.target .
 
 function darZoom(event) {
-  event.target.style.fontSize = '30px';
+  event.target.style.fontSize = '50px';
 }
 function tirarZoom(event) {
   event.target.style.fontSize = '20px';
@@ -160,20 +160,37 @@ for (let i = 0; i < diasdoMes.length; i += 1) {
 // Ao pressionar a tecla "enter" o evento também deverá ser disparado.
 // Dica - Propriedade: keyCode .
 
-localStorage.setItem('name', 'Pedro');
-localStorage.setItem('lastName', 'Verano');
-sessionStorage.setItem('car', 0);
 
-criarbotao('Contador',document.querySelector('.buttons-container'),'contador');
-let contadorr = 0;
-function adicionaCar(evento) {
-  contadorr += 1;
-  sessionStorage.setItem('car', contadorr)
-  localStorage.setItem('contador', contadorr);
-  console.log(sessionStorage.getItem('car'));
-  
-}
-document.querySelector('#contador').addEventListener('click',adicionaCar);
+// if (localStorage.length === 0){
+//   localStorage.setItem('corFundo', '#eee'); 
+//   localStorage.setItem('corDoTexto', '#777');
+//   localStorage.setItem('tamanhoFonte', '20px');
+//   localStorage.setItem('lineHeight', '');
+//   localStorage.setItem('fontFamily', 'Verdana');
 
+// }
 
+// function createInput(pai,idInput, escrito){
+//   let input = document.createElement('input');
+//   input.id = idInput;
+//   input.placeholder = escrito;
+//   input.type ="text";
+//   pai.appendChild(input);
+// }
+// let divultima = document.createElement('div');
+// divultima.className = 'divUltima';
 
+// document.body.appendChild(divultima);
+
+// let divExercise = document.querySelector('.divUltima');
+// console.log(divExercise);
+// createInput(divExercise,'corDeFundo','Escreva sua cor de fundo Ex : #ffffff');
+// criarbotao('MudarCor',divExercise,'botaoCorFundo');
+
+// function mudarCorFundo(event) {
+//   let texto = document.querySelector('#corDeFundo').value;
+//   console.log(texto);
+//   localStorage.setItem('corFundo' ,texto);
+//   document.body.style.backgroundColor = localStorage.getItem('corFundo');
+// }
+// document.querySelector('#botaoCorFundo').addEventListener('click', mudarCorFundo);
