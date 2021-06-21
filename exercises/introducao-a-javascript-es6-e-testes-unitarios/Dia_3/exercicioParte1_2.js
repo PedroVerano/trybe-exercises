@@ -15,8 +15,13 @@ function myRemove(arr, item) {
   }
   return newArr;
 }
+
+
+
 assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3),[1, 2, 4]);
 assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4]);
+const array = [1, 2, 45, 6, 7];
+assert.notDeepStrictEqual(myRemove(array,2), array);
 assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5),[1, 2, 3, 4]);
 
 
