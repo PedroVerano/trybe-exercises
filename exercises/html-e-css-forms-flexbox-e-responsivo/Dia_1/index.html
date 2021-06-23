@@ -5,54 +5,83 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário de Currículo</title>
+  <link rel="stylesheet" href="bootstrap-5.0.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
   <header>
-    <h1>Currículo</h1>
+    <h1 class="display-4 text-muted">Currículo</h1>
   </header>
   <section>
-    <form action="" method="get">
-      <div class="div-container">
+    <form action="" method="get" class="container">
+      <div class="container">
         <fieldset>
-          <label for="input-nome">Nome:
-            <input type="text" id="input-nome" name="nome" maxlength="40" required>
-          </label>
-          <label for="input-email">Email:
-            <input type="email" name="email" id="input-email" maxlength="50" required>
-          </label>
-          <label for="input-cpf">CPF:
-            <input type="number" name="cpf" id="input-cpf" maxlength="11" required>
-          </label>
-          <label for="input-endereco">Endereço:
-            <input type="text" name="endereco" id="input-endereco" maxlength="200" required>
-          </label>
-          <label for="input-cidade">Cidade:
-            <input type="text" name="cidade" id="input-cidade" maxlength="28" required>
-          </label>
-          <label for="select-estado">Estado:
-            <select name="estado" id="select-estado" required></select>
-          </label>
-          <label for="radio-casa">Tipo:
-            <input type="radio" name="tipo-moradia" id="casa">Casa
-            <input type="radio" name="tipo-moradia" id="apartamento">Apartamento
-          </label>
+         <div class="form-group">
+            <label for="input-nome" class="form-label">Nome:
+              <input type="text" class="form-control" id="input-nome" name="nome" maxlength="40" required>
+            </label>
+         </div>
+         <div>
+            <label for="input-email" class="form-label">Email:
+              <input type="email" class="form-control" name="email" id="input-email" maxlength="50" required>
+            </label>
+         </div>
+         <div>
+            <label for="input-cpf" class="form-label">CPF:
+              <input type="text" class="form-control" name="cpf" id="input-cpf" maxlength="11" required>
+            </label>
+         </div>
+         <div>
+            <label for="input-endereco" class="form-label">Endereço:
+              <input type="text" class="form-control" name="endereco" id="input-endereco" maxlength="200" required>
+            </label>
+         </div>
+         <div>
+            <label for="input-cidade" class="form-label">Cidade:
+              <input type="text" class="form-control" name="cidade" id="input-cidade" maxlength="28" required>
+            </label>
+         </div>
+         <div>
+            <label for="select-estado" class="form-label">Estado:
+              <select name="estado" class="form-control" id="select-estado" required></select>
+            </label>
+         </div>
+         <div class="form-group">
+            <label for="radio-casa" class="form-label">Tipo de moradia:</label>
+           <div class="form-check form-switch">
+              <input type="radio" class="form-check-input" name="tipo-moradia" id="casa">Casa
+           </div>
+           <div class="form-check form-switch"> 
+            <input type="radio" class="form-check-input" name="tipo-moradia" id="apartamento">Apartamento
+           </div>
+         </div>
         </fieldset>
       </div>
-      <fieldset>
-        <label for="text-curriculo">Resumo do Curriculo
-          <textarea name="resumo-curriculo" id="text-curriculo" cols="50" rows="20" maxlength="1000" required></textarea>
-        </label>
-        <label for="input-cargo">Cargo:
-          <input type="text" name="cargo" id="input-cargo" maxlength="40" required>
-        </label>
-        <label for="input-DesricaoCargo">Descrição do cargo:
-          <input type="text" name="descricao-Cargo" id="input-DesricaoCargo" maxlength="500" required>
-        </label>
-        <label for="input-data">Data de inicio: 
-          <input type="date" name="dataInicio" id="input-data" required>
-        </label>
-      </fieldset>
+      <div class="container">
+        <fieldset>
+          <div>
+            <p>Resumo do Curriculo</p>
+            <textarea name="resumo-curriculo" class="form-control" id="text-curriculo"  maxlength="1000" required></textarea>
+          </div>
+          <div>
+            <label for="input-cargo" class="form-label">Cargo:
+              <input type="text" class="form-control" name="cargo" id="input-cargo" maxlength="40" required>
+            </label>
+          </div>
+          <div>
+            <label for="input-DesricaoCargo" class="form-label">Descrição do cargo:
+              <input type="text" class="form-control" name="descricao-Cargo" id="input-DesricaoCargo" maxlength="500" required>
+            </label>
+          </div>
+          <div>
+            <label for="input-data" class="form-label">Data de inicio: 
+              <input type="text" class="form-control" name="dataInicio" id="input-data" required>
+            </label>
+          </div>
+        </fieldset>
+      </div>
     </form>
   </section>
   <script src="script.js"></script>
