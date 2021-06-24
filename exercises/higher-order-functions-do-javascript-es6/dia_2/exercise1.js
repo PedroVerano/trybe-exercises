@@ -63,8 +63,6 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
-
 function authorBornIn1947() {
   // escreva aqui o seu código
 }
